@@ -90,7 +90,7 @@ const MyAppoitments = () => {
       const {data} = await axios.post(backendUrl + '/api/user/payment-razorpay', {appointmentId}, {headers:{token}})
 
       if(data.success){ 
-
+        // console.log(data.order)
         initPay(data.order)
       }
      } catch (error) {
